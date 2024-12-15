@@ -1,0 +1,3 @@
+In this project, the main program files involves the public folder (index.html/script.js/sytle.css), 
+the python folder (InsturctionDisplay.py and NavigationProcess.py) and 
+five files in main folder (display_ip.py, server.js and three start bash files).

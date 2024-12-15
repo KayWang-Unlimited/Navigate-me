@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* blue header for the top of the page */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100% - 60px); 
+    height: auto;
+    overflow: visible;
+}
+
+#controls {
+    text-align: center;
+    margin: 10px 0;
+    z-index: 1; /* Makes sure buttons stay on top */
+}
+
+#controls button, #controls input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#canvasSection {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#mapCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+#directionsPanel, #navigationWindow {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* Footer at the bottom of the page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #666;
+}
+
+#nextAction {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+#nextAction p {
+    margin: 10px 0;
+}
+
+.gps-status {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.gps-status div {
+    margin: 4px 0;
+}
+
+.gps-error {
+    color: #d32f2f;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    background: #ffebee;
+    border-radius: 4px;
+}

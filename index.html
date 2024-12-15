@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>GPS-Navigation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        /* This makes the map take up the whole screen */
+        #mapCanvas { height: 100%; width: 100%; position: absolute; }
+        
+        /*for the search box and button */
+        #controls { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            background: white; 
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        /* shows the navigation instructions */
+        #instructions {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 300px;
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            max-height: 80%;
+            overflow-y: auto;
+        }
+
+        /* Shows GPS information at the bottom */
+        #gpsInfo {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Makes error messages */
+        .gps-error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mapCanvas"></div>
+
+    <!-- The search box and button -->
+    <div id="controls">
+        <input type="text" id="destination" placeholder="input destination">
+        <button id="showRoute">showRoute</button>
+    </div>
+
+    <!-- Navigation instructions will show here -->
+    <div id="instructions"></div>
+
+    <!-- GPS information will show here -->
+    <div id="gpsInfo"></div>
+    
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Call Google Maps API and the real API is hidden -->
+    <script src="" async defer></script>
+</body>
+</html>
